@@ -9,7 +9,7 @@ from keras.layers import *
 from keras.optimizers import *
 from test_agent import Agent_Test
 from train_agent import Agent_Q_learning_reduced
-from snake_game import Snake_Walls
+from environment import Snake_Walls
 import matplotlib.pyplot as plt
 Kbackend.set_image_dim_ordering('th')
 

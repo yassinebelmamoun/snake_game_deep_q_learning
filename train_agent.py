@@ -6,12 +6,12 @@ class Agent_Q_learning_reduced:
 
     def __init__(self, model, batch_size=6):
         ''' Initialization '''
-         self.memory         = []
-         self.model          = model
-         self.batch_size     = batch_size
-         self.states         = None
-         self.shape_of_input = (batch_size, 6)
-         # Size of the reduced state space , batch_size is the number of frames of the game composing one single state
+        self.memory         = []
+        self.model          = model
+        self.batch_size     = batch_size
+        self.states         = None
+        self.shape_of_input = (batch_size, 6)
+        # Size of the reduced state space , batch_size is the number of frames of the game composing one single state
 
 
     def refresh_states(self, game):

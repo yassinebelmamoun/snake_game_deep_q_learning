@@ -182,9 +182,7 @@ class Snake_Walls:
             while position[head[0], head[1] + l] not in (1, 8):
                 l += 1
                 relative_wall_right += 1
-        else:
-            print('******* ERROR simple_state method in the snake_game********')
-            # TODO: Raise error / If no error raised: Remove the if condition
+        # TODO: else Raise error / If no error raised: Remove the if condition
 
         relative_fruit_x = fruit[0] - head[0]
         relative_fruit_y = fruit[1] - head[1]
