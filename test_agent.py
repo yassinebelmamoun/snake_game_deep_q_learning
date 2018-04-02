@@ -34,10 +34,10 @@ class Agent_Test:
 
         for i in range(self.N):
 
-            jeu     = self.snakeTable[i]
+            game     = self.snakeTable[i]
             agent   = self.agentTable[i]
 
-            eaten_fruits[i], error_train[i], games_won[i] = agent.train(jeu, epsilon, gamma, **param_train)
+            eaten_fruits[i], error_train[i], games_won[i] = agent.train(game, epsilon, gamma, **param_train)
             optimality[i] = eaten_fruits[i] / self.optimal
 
         return eaten_fruits.mean(), optimality.mean() * 100, error_train.mean(), games_won.sum()
