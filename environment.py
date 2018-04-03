@@ -140,7 +140,7 @@ class Snake_Walls:
 
         # Fruit Position
         position[self.fruit[0], self.fruit[1]] = 4
-
+        print(position)
         return position
 
 

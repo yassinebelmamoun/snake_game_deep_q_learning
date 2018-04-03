@@ -21,7 +21,7 @@ class Agent_Test:
             self.agentTable[len(self.agentTable):] = [agent(**param_agent)]
 
         #TODO: Replace with # field value - initial size
-        self.optimal = 18 # 4*5-2 maximum number of fruits the snake can eat
+        self.optimal = 14 # TODO: need to be dynamic 4*5-2 maximum number of fruits the snake can eat
 
 
     def oneStep(self, param_train, epsilon, gamma):
@@ -67,7 +67,8 @@ class Agent_Test:
             display = '\r-- Epoch: {0}\n -- Average_reward: {1}\n -- optimality_average: {2}\n -- training_error: {3}\n -- number_of_games_won: {4}\n'
             sys.stdout.write(display.format(i, reward_mean[i], optimality_mean[i], error_mean[i], total_of_games_won[i]))
             sys.stdout.flush()
-
+            if i == 4/5 * self.iters:
+                name = input("Training completed. Would you like to start to Testing ? [PRESS ENTER] ")
             if eps > last_epsilon:
                 eps -= delta_epsilon
             if gam < last_gamma:
